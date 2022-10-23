@@ -18,7 +18,6 @@ function App() {
         {
           path: "/hotel",
           element: <Hotel />,
-          loader: () => fetch("http://localhost:5000/hotels"),
         },
       ],
     },

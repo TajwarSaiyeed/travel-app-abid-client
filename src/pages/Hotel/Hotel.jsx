@@ -1,13 +1,15 @@
 import React from "react";
-import { useLoaderData } from "react-router-dom";
-// import hotelimg from "../../assets/images/Rectangle 1.png";
 import Card from "../../components/Card/Card";
+import img1 from "../../assets/images/Rectangle1.png";
+import img2 from "../../assets/images/Rectangle26.png";
+import img3 from "../../assets/images/Rectangle27.png";
+import { Marker, Popup } from "react-leaflet";
+import { MapContainer } from "react-leaflet/MapContainer";
+import { TileLayer } from "react-leaflet/TileLayer";
+
 const Hotel = () => {
-  const hotels = useLoaderData();
-  console.log(hotels[0].room_img);
   return (
     <div className="grid lg:grid-cols-2 px-12 ">
-      <img src={hotels[0].room_img} alt="" />
       <div className="grid grid-cols-1 gap-3 p-5">
         {/* <div>
           <img src={hotelimg} alt="" />
@@ -28,11 +30,27 @@ const Hotel = () => {
             </div>
           </div>
         </div> */}
-        <Card />
-        <Card />
-        <Card />
+        <Card src={img1} />
+        <Card src={img2} />
+        <Card src={img3} />
       </div>
-      <div>Right</div>
+      <div>
+        <MapContainer
+          center={[51.505, -0.09]}
+          zoom={13}
+          scrollWheelZoom={false}
+        >
+          <TileLayer
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          />
+          <Marker position={[51.505, -0.09]}>
+            <Popup>
+              A pretty CSS3 popup. <br /> Easily customizable.
+            </Popup>
+          </Marker>
+        </MapContainer>
+      </div>
     </div>
   );
 };
