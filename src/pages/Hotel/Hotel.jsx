@@ -1,9 +1,13 @@
 import React from "react";
+import { useLoaderData } from "react-router-dom";
 // import hotelimg from "../../assets/images/Rectangle 1.png";
 import Card from "../../components/Card/Card";
 const Hotel = () => {
+  const hotels = useLoaderData();
+  console.log(hotels[0].room_img);
   return (
     <div className="grid lg:grid-cols-2 px-12 ">
+      <img src={hotels[0].room_img} alt="" />
       <div className="grid grid-cols-1 gap-3 p-5">
         {/* <div>
           <img src={hotelimg} alt="" />

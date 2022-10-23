@@ -15,7 +15,11 @@ function App() {
         { path: "/", element: <Home /> },
         { path: "/login", element: <Login /> },
         { path: "/signup", element: <SignUp /> },
-        { path: "/hotel", element: <Hotel /> },
+        {
+          path: "/hotel",
+          element: <Hotel />,
+          loader: () => fetch("http://localhost:5000/hotels"),
+        },
       ],
     },
   ]);
