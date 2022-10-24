@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import logo from "../../../assets/logo.png";
 
 import { Fragment } from "react";
@@ -12,6 +12,7 @@ const navigation = [
   { name: "Hotel", href: "/hotel", current: false },
   { name: "Login", href: "/login", current: false },
   { name: "Signup", href: "/signup", current: false },
+  { name: "Booking", href: "/booking", current: false },
 ];
 
 function classNames(...classes) {
@@ -19,13 +20,8 @@ function classNames(...classes) {
 }
 
 const Navbar = () => {
-  const location = useLocation();
-
   return (
-    <Disclosure
-      as="nav"
-      className={location.pathname === "/" ? "bg-white" : "bg-transparent"}
-    >
+    <Disclosure as="nav" className="bg-transparent">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -49,7 +45,8 @@ const Navbar = () => {
                     alt="Your Company"
                   />
                   <img
-                    className="hidden h-8 w-auto lg:block shadow-slate-100"
+                    className="hidden h-8 w-auto lg:block"
+                    style={{ filter: "drop-shadow(0px 0px 5px #fff)" }}
                     src={logo}
                     alt="Your Company"
                   />

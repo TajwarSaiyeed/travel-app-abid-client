@@ -14,7 +14,15 @@ const Main = () => {
           : ""
       }
     >
-      <Navbar />
+      <div
+        className={
+          location.pathname === "/" || location.pathname === "/booking"
+            ? `absolute w-full`
+            : ""
+        }
+      >
+        <Navbar />
+      </div>
       <div className="min-h-screen">
         <Outlet></Outlet>
       </div>

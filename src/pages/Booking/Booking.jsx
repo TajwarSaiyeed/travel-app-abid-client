@@ -1,18 +1,9 @@
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/effect-cards";
-
-import "./Home.css";
-
-// import required modules
-import { EffectCards } from "swiper";
-const Home = () => {
+const Booking = () => {
   return (
     <div className="flex justify-between items-center  w-full h-screen absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4">
-      <div className=" px-20 py-10 flex flex-col justify-start items-start ">
+      <div className=" px-20 py-10 flex flex-col justify-start items-start">
         <h1 className="text-7xl font-bold text-white  uppercase">
           Cox's Bazar
         </h1>
@@ -41,20 +32,9 @@ const Home = () => {
           </svg>
         </button>
       </div>
-      <div className="w-full h-96">
-        <Swiper
-          effect={"cards"}
-          grabCursor={true}
-          modules={[EffectCards]}
-          className="mySwiper"
-        >
-          <SwiperSlide></SwiperSlide>
-          <SwiperSlide></SwiperSlide>
-          <SwiperSlide></SwiperSlide>
-        </Swiper>
-      </div>
+      <div>right side</div>
     </div>
   );
 };
 
-export default Home;
+export default Booking;
