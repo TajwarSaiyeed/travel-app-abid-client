@@ -10,8 +10,8 @@ import { HiOutlineX } from "react-icons/hi";
 const navigation = [
   { name: "Home", href: "/", current: true },
   { name: "Hotel", href: "/hotel", current: false },
-  { name: "loLink", href: "#", current: false },
-  { name: "Calendar", href: "#", current: false },
+  { name: "Login", href: "/login", current: false },
+  { name: "Signup", href: "/signup", current: false },
 ];
 
 function classNames(...classes) {
@@ -44,7 +44,7 @@ const Navbar = () => {
                     alt="Your Company"
                   />
                   <img
-                    className="hidden h-8 w-auto lg:block"
+                    className="hidden h-8 w-auto lg:block shadow-slate-100"
                     src={logo}
                     alt="Your Company"
                   />
@@ -81,7 +81,7 @@ const Navbar = () => {
                 {/* Profile dropdown */}
                 <Menu as="div" className="relative ml-3">
                   <div>
-                    <Menu.Button className="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                    <Menu.Button className="flex rounded-full  bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                       <span className="sr-only">Open user menu</span>
                       <img
                         className="h-8 w-8 rounded-full"
