@@ -122,10 +122,10 @@ const Login = () => {
           </button>
           <button
             type="button"
-            class="rounded-full hover:text-white hover:bg-[#4285F4]/90 focus:ring-4 focus:outline-none focus:ring-[#4285F4]/50 font-medium  text-sm px-2 pr-3 text-center  border border-black hover:border-gray-200 flex items-center dark:focus:ring-[#4285F4]/55 mr-2 mb-2 justify-between w-52"
+            className="rounded-full hover:text-white hover:bg-[#4285F4]/90 focus:ring-4 focus:outline-none focus:ring-[#4285F4]/50 font-medium  text-sm px-2 pr-3 text-center  border border-black hover:border-gray-200 flex items-center dark:focus:ring-[#4285F4]/55 mr-2 mb-2 justify-between w-52"
           >
             <svg
-              class="mr-2 -ml-1 w-8 h-8 bg-[#4285F4] rounded-full p-2"
+              className="mr-2 -ml-1 w-8 h-8 bg-[#4285F4] rounded-full p-2"
               aria-hidden="true"
               focusable="false"
               data-prefix="fab"

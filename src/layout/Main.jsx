@@ -17,7 +17,7 @@ const Main = () => {
       <div
         className={
           location.pathname === "/" || location.pathname === "/booking"
-            ? `absolute w-full`
+            ? `absolute w-full z-50`
             : ""
         }
       >
