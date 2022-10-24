@@ -7,9 +7,17 @@ const Main = () => {
   const location = useLocation();
   console.log(location);
   return (
-    <div className={location.pathname === "/" ? `backgroundFull` : ""}>
+    <div
+      className={
+        location.pathname === "/" || location.pathname === "/booking"
+          ? `backgroundFull`
+          : ""
+      }
+    >
       <Navbar />
-      <Outlet></Outlet>
+      <div className="min-h-screen">
+        <Outlet></Outlet>
+      </div>
       <Footer />
     </div>
   );

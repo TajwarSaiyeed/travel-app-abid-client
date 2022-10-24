@@ -9,7 +9,7 @@ import { TileLayer } from "react-leaflet/TileLayer";
 
 const Hotel = () => {
   return (
-    <div className="grid lg:grid-cols-2 px-12 ">
+    <div className="grid lg:grid-cols-2 px-12  py-5">
       <div className="grid grid-cols-1 gap-3 p-5">
         {/* <div>
           <img src={hotelimg} alt="" />
@@ -34,7 +34,7 @@ const Hotel = () => {
         <Card src={img2} />
         <Card src={img3} />
       </div>
-      <div>
+      <div className="bg-white rounded-lg overflow-hidden">
         <MapContainer
           center={[51.505, -0.09]}
           zoom={13}

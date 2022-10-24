@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../../../assets/logo.png";
 
 import { Fragment } from "react";
@@ -19,8 +19,13 @@ function classNames(...classes) {
 }
 
 const Navbar = () => {
+  const location = useLocation();
+
   return (
-    <Disclosure as="nav" className="bg-transparent">
+    <Disclosure
+      as="nav"
+      className={location.pathname === "/" ? "bg-white" : "bg-transparent"}
+    >
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
